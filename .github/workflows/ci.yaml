@@ -23,3 +23,6 @@ jobs:
       - name: Lint
         run: golint -set_exit_status
 
+      - name: Build
+        run: go build main.go
+
