@@ -17,6 +17,12 @@ jobs:
       - name: Install Dependencies
         run: go mod download
 
+      - name: LS
+        run: ls
+
+      - name: pwd
+        run: pwd
+
       - name: Lint
-        run: golint
+        run: ~/go/bin/golint
 
