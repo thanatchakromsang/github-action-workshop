@@ -9,6 +9,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '^1.13.1'
+      - run: go version
 
-      - name: "Hello World"
-        run: "echo Hello World"
+      - name: Install Dependencies
+        run: go mod download
+
+      - name: Lint
+        run: golint
+
