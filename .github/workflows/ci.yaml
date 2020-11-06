@@ -17,9 +17,9 @@ jobs:
       - name: Install Dependencies
         run: go mod download
 
-      - name: go env
-        run: go env
+      - name: Install Golint
+        run: go get -u golang.org/x/lint/golint
 
       - name: Lint
-        run: ~/go/bin/golint
+        run: golint
 
